@@ -77,6 +77,8 @@ node_templates:
       target: subnet
     - type: cloudify.relationships.depends_on
       target: agent_key
+    - type: cloudify.relationships.depends_on
+      target: cloud_init  
     interfaces:
       cloudify.interfaces.lifecycle:
         create:
