@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo mv -f /etc/nginx/nginx.conf /etc/nginx/nginx.conf.bak
 sudo mkdir -p /etc/nginx/www
-echo "<html><head><style>body {font-family: Helvetica, sans-serif;}</style></head><body><br><br><br><br><br><br><br><br><center><img src='https://mk0getcloudify4yiua1.kinstacdn.com/wp-content/uploads/2017/01/Cloudify_Logo_horizontal.png' width='500' height='162'><br><h1>${message}</h1></body></html>" | sudo tee /etc/nginx/www/index.html
+echo "<html><head><style>body {font-family: Helvetica, sans-serif;}</style></head><body><br><br><br><br><br><br><br><br><center><img src='https://mk0getcloudify4yiua1.kinstacdn.com/wp-content/uploads/2020/11/Cloudify-Logo-site-.png' width='500' height='162'><br><h1>${message}</h1></body></html>" | sudo tee /etc/nginx/www/index.html
 sudo chmod 0755 /etc/nginx/www
 sudo chmod 644 /etc/nginx/www/index.html
 ctx logger info "app: index webpage created"
