@@ -1,4 +1,4 @@
-# td-poc
+# gcp-poc
 
 Simple blueprints prepared for PoC for GCP. 
 
