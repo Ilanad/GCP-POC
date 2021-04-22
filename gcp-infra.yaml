@@ -33,8 +33,8 @@ inputs:
 
   image:
     type: string
-    description: A Ubuntu Trusty 14.04 image.
-    default: https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-1404-trusty-v20170517
+    description: CENTOS 7 image
+    default: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20210420
 
   instance_type:
     type: string
@@ -44,7 +44,7 @@ inputs:
   agent_user:
     description: >
       The username of the agent running on the instance created from the image.
-    default: 'ubuntu'
+    default: 'centos'
 
   agent_key_name:
     type: string
