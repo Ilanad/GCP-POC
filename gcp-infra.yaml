@@ -33,8 +33,8 @@ inputs:
 
   image:
     type: string
-    description: CENTOS 7 image
-    default: https://www.googleapis.com/compute/v1/projects/centos-cloud/global/images/centos-7-v20210420
+    description: Ubuntu image
+    default: https://www.googleapis.com/compute/v1/projects/ubuntu-os-cloud/global/images/ubuntu-1404-trusty-v20170517
 
   instance_type:
     type: string
@@ -44,7 +44,7 @@ inputs:
   agent_user:
     description: >
       The username of the agent running on the instance created from the image.
-    default: 'centos'
+    default: 'ubuntu'
 
   agent_key_name:
     type: string
@@ -66,7 +66,7 @@ node_templates:
       agent_config:
         install_method: remote
         key: { get_attribute: [agent_key, private_key_export] }
-        user: centos
+        user: ubuntu
       use_public_ip: true
       image_id: { get_input: image }
       instance_type: { get_input: instance_type }
@@ -126,7 +126,7 @@ node_templates:
     properties:
       resource_config:
         users:
-        - name: centos
+        - name: ubuntu
           shell: /bin/bash
           sudo: ['ALL=(ALL) NOPASSWD:ALL']
           ssh-authorized-keys:
