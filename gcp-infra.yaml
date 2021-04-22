@@ -66,7 +66,7 @@ node_templates:
       agent_config:
         install_method: remote
         key: { get_attribute: [agent_key, private_key_export] }
-        user: { get_input: agent_user }
+        user: centos
       use_public_ip: true
       image_id: { get_input: image }
       instance_type: { get_input: instance_type }
